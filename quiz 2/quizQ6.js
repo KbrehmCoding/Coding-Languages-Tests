@@ -13,7 +13,9 @@ function nextLetter(string) {
         if (96< string.charCodeAt(i)&& string.charCodeAt(1)< 123) {
     //the 0 in charAt is each letter since we split it up to single letters
     //since we are replacing instead of just upper or lower casing it I'll probably need to use replace this time
-            string[i] = string[i].charAt(0)
+    //dont need the [i] part for this problem
+    // will need to add 1 onto the charCodeAt element to get the next letter
+            string = string.replace(string.charAt(0))
         }
     }
     //this joins all the strings back together into one string
