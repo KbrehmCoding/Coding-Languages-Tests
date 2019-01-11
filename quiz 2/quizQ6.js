@@ -11,11 +11,13 @@ function nextLetter(string) {
     for (var i = 0; i < string.length; i++) {
         //the alphabets code is between 96 and 123 so you want to make sure that is is between those so this checks for that
         if (96< string.charCodeAt(i)&& string.charCodeAt(1)< 123) {
-    //the 0 in charAt is each letter since we split it up to single letters
-    //since we are replacing instead of just upper or lower casing it I'll probably need to use replace this time
-    //dont need the [i] part for this problem
-    // will need to add 1 onto the charCodeAt element to get the next letter
-            string = string.replace(string.charAt(0))
+    //so I dont want to use replace since it will replace each instance of a letter everytime you come to it so say you used abc
+    //it would replace a with b and the b with c but it will replace the letter before it as well so it goes abc to bbc to ccc
+    //to ddd which is not what we want here dont need the [i] part for this problem, so instead we want to create a new string
+    //String.fromCharAt returns a string based on the letter code
+    //will need to add 1 onto the charCodeAt element to get the next letter
+    //but it probably wont handle z correctly sice the next unicode after it is not a letter but a symbol
+            newString += String.fromCharAt(string.charCodeAt(i) + 1);
         }
     }
     //this joins all the strings back together into one string
