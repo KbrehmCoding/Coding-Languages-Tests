@@ -1,7 +1,7 @@
 // Write a program to replace every character in a given string with the character following it in the alphabet.
 
 //probably need to create a loop that splits all the letters into seperate array items
-//maybe need to use the code for the alphapet to change the letters, like maybe i++ to the code that then returns the letter
+//maybe need to use the code for the alphapet to change the letters, like maybe i++ to the code that then returns the letter after it
 //then string join once the loop has gone through all the letters
 
 function nextLetter(string) {
@@ -12,6 +12,7 @@ function nextLetter(string) {
         //the alphabets code is between 96 and 123 so you want to make sure that is is between those so this checks for that
         if (96< string.charCodeAt(i)&& string.charCodeAt(1)< 123) {
     //the 0 in charAt is each letter since we split it up to single letters
+    //since we are replacing instead of just upper or lower casing it I'll probably need to use replace this time
             string[i] = string[i].charAt(0)
         }
     }
