@@ -4,8 +4,8 @@
 // How to count the number of ocurences instead of just returning the vowels themselves
 //may need to break the string down into an array of letters that are then compared to the vowels array
 
-var string = "Krista";
+var string = "Angelica";
 
-var vowels = /[aeiou]/g;
+var vowels = /[AEIOUaeiou]/g;
 
-console.log("There are " + string.search(vowels) + " vowels in " + string);
+console.log("There are " + string.match(vowels).length + " vowels in " + string);
