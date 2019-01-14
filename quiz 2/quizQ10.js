@@ -6,9 +6,6 @@
 
 var string = "Krista";
 
-var vowels = /["a", "e", "i", "o", "u", "y"]/g;
-
-
-;
+var vowels = /[aeiou]/g;
 
 console.log("There are " + string.search(vowels) + " vowels in " + string);
