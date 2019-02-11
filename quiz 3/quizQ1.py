@@ -1,14 +1,11 @@
 # 1. Write a program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.
-A=(H^b*B)/2
 
-a = 5;
-b = 6;
-B = 6;
-c = 7;
-H = 7;
+a = 5
+b = 6
+c = 7
+s = (a+b+c) / 2
 
-Semiperimeter = ((a+b+c)*1/2);
+Area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+area = (9*(9-5)*(9-6)*(9-7)) ** 0.5
 
-#
-Area = (Math.sqrt((Semiperimeter-a)*(Semiperimeter-b)*(Semiperimeter-c)));
-console.log(Area);
+print(area)
