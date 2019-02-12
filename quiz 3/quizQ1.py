@@ -6,6 +6,5 @@ c = 7
 s = (a+b+c) / 2
 
 Area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
-area = (9*(9-5)*(9-6)*(9-7)) ** 0.5
 
-print(area)
+print(Area)
