@@ -2,7 +2,7 @@
 
 numbers = [1, 2, 3]
 
-def compareNumbers(array)
+def compareNumbers():
     largestNumber = ""
     array.forEach(def(numbers)
         if(numbers > largestNumber)
