@@ -20,4 +20,11 @@ def divide():
     print(sumDivi)
 
 
+operator= input("Input: ")
+while (operator != 'multiply') and (operator != 'divide'):
+    operator = input("Input: ")
 
+if operator == 'multiply':
+    multiply();
+elif operator == 'divide':
+    devide();
