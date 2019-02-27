@@ -1,9 +1,8 @@
 #  3. Write a program to calculate multiplication and division of two numbers (input from user).
 
 # TODO look up pyhon code to take user input in  the command line and use it in math functions
-num1 = input("Please input first number: ")
-num2 = input("Please input second number: ")
-operator = input("Would you like to multiply these numbers, or divide them? : ")
+num1 = int(input("Please input first number: "))
+num2 = int(input("Please input second number: "))
 
 def multiply():
     num1 = (num1).val()
@@ -20,11 +19,9 @@ def divide():
     print(sumDivi)
 
 
-operator= input("Input: ")
-while (operator != 'multiply') and (operator != 'divide'):
-    operator = input("Input: ")
-
-if operator == 'multiply':
-    multiply();
-elif operator == 'divide':
-    devide();
+operator = input("Would you like to multiply these numbers, or divide them? : ")
+while operator != "multiply" or operator != "divide":
+    if operator == "multiply":
+        multiply()
+    elif operator == "divide":
+        devide()
