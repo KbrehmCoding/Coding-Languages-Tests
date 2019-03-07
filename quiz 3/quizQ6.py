@@ -1,7 +1,20 @@
 # Write a program to replace every character in a given string with the character following it in the alphabet.
 
-# probably need to create a loop that splits all the letters into seperate array items
-# maybe need to use the code for the alphapet to change the letters, like maybe i++ to the code that then returns the letter after it
-# then string join once the loop has gone through all the letters
+def nextLetter(string):
+    newString = ''
+    # Todo research python for loops
+    for x in string:
+        if 122 == ord(i):
+            newString += chr(97)
+        elif 90 == ord(i):
+            newString += chr(65)
+        elif 65 < ord(i) and string.ord(i) < 90 :
+            newString += chr(ord(i) + 1)
+        elif 97 < ord(i) and ord(i) < 121 :
+            newString += chr(ord(i) + 1)
 
+    return newString
 
+print (nextLetter("Hello"))
+
+nextLetter()
