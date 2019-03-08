@@ -2,6 +2,7 @@
 
 def nextLetter(string):
     newString = ''
+    i = 0
     # Todo research python for loops
     for x in string:
         if 122 == ord(i):
