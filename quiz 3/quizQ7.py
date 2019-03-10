@@ -1,11 +1,8 @@
-# // Write a program to capitalize the first letter of each word of a given string.
-
-def CapitilizeIt(string):
-    string = string.toLowerCase().split(' ')
-    for x in string :
-        string[i] = string[i].chr(0).toUpperCase() + string[i].slice(1);
-
-    return string.join(' ')
+# Write a program to capitalize the first letter of each word of a given string.
+# to split stings in python (a.split(" "))
+# to caitalize letters in python (a.upper())
+# Connect the string back together string = "-".join(string)
+# Return the new string
 
 
-print CapitilizeIt("I want pizza please")
+def capitalizeIt() :
