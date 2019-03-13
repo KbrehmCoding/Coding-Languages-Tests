@@ -1,7 +1,14 @@
-# Write a program to find the longest string from a given array.
+cats = ["Bob", "Tuxie", "Scarlett"]
 
-# Will need to create a loop
-# Use len to count the length of each item in array
-# When a item is found to be longer than the longest word,
-# it will become the new value for longest word
-# Final step is to print the longest word
+# def name_length(cats):
+#     count = 0
+#     for i in cats:
+#         if len(i) > count:
+#             count = len(i)
+#             longestName = i
+#             return longestName
+#     print "{} is the longest name in the array".format(longesttName)
+
+# name_length(cats)
+
+print max(cats , key = len)
