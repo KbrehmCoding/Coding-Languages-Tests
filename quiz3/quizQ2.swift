@@ -4,13 +4,11 @@
 // May need to seperate the letters of the string into individual characters then move,
 // the first letter and join them together each time the for loop iterates
 
-
-
 func rotateThisString() {
     var word = "Chocolate"
     for x in word {
-        word.subString(from: word.endIndex)
-        word.prepend(endIndex)
+        word.sufix(1)
+        word.prepend(sufix(1))
     }
 }
 
