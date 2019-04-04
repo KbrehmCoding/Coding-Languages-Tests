@@ -4,7 +4,7 @@ var givenString = "I want ice cream"
 var numVowels = 0
 
 for i in givenString {
-    if i == "a" , "A", "e" , "E" , "i" , "I" , "o" , "O" , "u" , "U" {
+    if[ "a" , "A", "e" , "E" , "i" , "I" , "o" , "O" , "u" , "U" ].contains(i) {
         numVowels += 1
     }
 }

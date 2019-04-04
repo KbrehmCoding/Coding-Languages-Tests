@@ -5,11 +5,9 @@
 // the first letter and join them together each time the for loop iterates
 // Possibly need to use end index to grab the last letter and maybe prepend to attatch it to the begining?
 //still trying to find a way to do this without using substring
-func rotateThisString() {
-    var word = "Chocolate"
-    for x in word {
 
-    }
+var word = "Chocolate"
+for character in word {
+    print(word)
 }
 
-rotateThisString()
