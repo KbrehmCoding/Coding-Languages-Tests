@@ -4,6 +4,8 @@
 // you need to use : when asigning the type such as int and double, or string.
 // learned that doubles are used for large decimals
 // The swift version of input in readLine() which you set as the value of a var
+// you have to add a "!" after the readline() but before the larger closing parenthases in order to make the Int translation work
+// You are required to set a default value incase the user doesnt enter anything (?? "value here")
 // Will need to make a if then statement to handle the operator choice made by the user
 // Then print the results
 
