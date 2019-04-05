@@ -9,11 +9,10 @@
         return($lastLetter + $restOfString);
     }
 
-        setInterval(function() {
-            console.log($string);
-            $string = rotateString($string);
-        }, 2000);
-    </script>
-    JS;
+    setInterval(function() {
+        print($string);
+        $string = rotateString($string);
+    }, 2000);
+
 
 ?>
