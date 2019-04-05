@@ -2,6 +2,6 @@
 
 var givenString = "she sells sea shells by the sea shore"
 
-var capitalizeFirst = givenString.
+var capitalizeFirst = givenString.slice()
 
 print(capitalizeFirst)
