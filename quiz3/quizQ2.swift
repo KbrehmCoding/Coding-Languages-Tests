@@ -8,6 +8,7 @@
 
 var word = "Chocolate"
 for character in word {
-    print(word)
+    var begining = word.[..8]
+    var end = word[9..9]
 }
 
