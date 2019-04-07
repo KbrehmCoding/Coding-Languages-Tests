@@ -1,6 +1,7 @@
-<!-- 3. Write a program to calculate multiplication and division of two numbers (input from user).  -->
 
 <?php
+//3. Write a program to calculate multiplication and division of two numbers (input from user).
+
     $operator = readline("Would you like to multiply or divide? (m/d): " );
     $num1 = readline("Please enter the first number: " );
     $num2 = readline("Please enter the second number: " );

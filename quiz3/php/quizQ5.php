@@ -1,5 +1,6 @@
-<!-- 5. Write a program to find the largest of three given integers. -->
 <?php
+// <!-- 5. Write a program to find the largest of three given integers. -->
+
     $givenIntegers = [23, 45, 11];
     $largestInteger = 0;
 

@@ -1,6 +1,7 @@
-<!-- 11. Write a program to find the longest string from a given array. -->
 
 <?php
+// 11. Write a program to find the longest string from a given array.
+
     $givenArray = array("Bob", "Scarlett", "Tuxie");
     $longestString = " ";
 
