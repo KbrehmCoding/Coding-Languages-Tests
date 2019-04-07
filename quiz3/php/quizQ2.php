@@ -14,5 +14,4 @@
         $string = rotateString($string);
     }, 2000);
 
-
 ?>
