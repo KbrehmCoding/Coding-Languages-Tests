@@ -1,0 +1,3 @@
+<?php
+print ord(A);
+?>
