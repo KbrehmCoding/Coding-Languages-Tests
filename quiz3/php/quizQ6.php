@@ -10,22 +10,24 @@
 
 function nextLetter($string) {
     $stringParts = str_split($string);
-    $newString = " ";
-    foreach($stringParts as $letter) {
-        if (ord($stringParts[$index]) == 122) {
-            $newString = ord(97);
-        } else if (ord($stringParts[$index]) == 90) {
-            $newString = ord(65);
-        } else if (ord($stringParts[$index]) > 65 && ord($stringParts[$index]) < 90) {
-            $newString = ord($string[$index]+1);
-        } else if (ord($stringParts[$index]) > 97 && ord($stringParts[$index]) < 121) {
-            $newString = ord($stringParts[$index]+1);
+    $newString = [];
+    foreach ($stringParts as $letter) {
+        // $newString .= chr(97);
+        if (ord($stringParts[$letter]) == 122) {
+            $newString .= chr(97);
+        } else if (ord($stringParts[$letter]) == 90) {
+            $newString .= chr(65);
+        } else if (chr($stringParts[$letter]) > 65 && chr($stringParts[$letter]) < 90) {
+            $newString .= chr($string[$letter] + 1);
+        } else if (chr($stringParts[$letter]) > 97 && chr($stringParts[$letter]) < 121) {
+            $newString .= chr($stringParts[$letter] + 1);
         }
     }
-    return $newString;
+    $changedString = join($newString);
+    return $changedString;
 }
 $string = "apple";
-$newString = nextLetter($string);
-print("$newString\r\n");
+$changedString = nextLetter($string);
+print("$changedString\r\n");
 
 ?>
