@@ -26,7 +26,7 @@ function nextLetter($string) {
     $changedString = implode($newString);
     return $changedString;
 }
-$string = "apple";
+$string = "Zoology";
 $changedString = nextLetter($string);
 print("$changedString\r\n");
 
