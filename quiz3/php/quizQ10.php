@@ -4,7 +4,15 @@
 
     $string = "banana";
     $stringParts = str_split($string);
+    $numVowels = 0;
+
     function countVowels(){
-        foreach
+        foreach($stringParts as $i) {
+            if ($i == [ "a" , "A", "e" , "E" , "i" , "I" , "o" , "O" , "u" , "U" ]) {
+                $numVowels + 1;
+            }
+        }
+        return $numVowles;
     }
+    echo "There are $numVowles vowels in $string \r\n";
 ?>

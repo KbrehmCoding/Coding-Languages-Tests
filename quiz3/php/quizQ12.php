@@ -1,20 +1,22 @@
 
 <?php
-// Write a program to change the capitalization of all letters in a given string.
+// 12. Write a program to change the capitalization of all letters in a given string.
 
-    $givenString = "Hungry";
-    function switchCapitalization() {
-        $givenStringArray = str_split($givenString);
-        foreach($givenStringArray as $character) {
-            if(ctype_upper($character)){
-                lcfirst($character);
-            } else if(ctype_lower($character)){
-                ucfirst($character);
-            }
+$givenString = "Hungry";
+
+function switchCapitalization($givenString) {
+    $givenStringArray = str_split($givenString);
+    foreach ($givenStringArray as $index => $letter) {
+        if (ctype_upper($letter) == true) {
+            $givenStringArray[$index] = strtolower($letter);
+        } else if (ctype_lower($letter) == true) {
+            $givenStringArray[$index] = strtoupper($letter);
         }
-        $newString = join($givenStringArray);
-        return $newString;
     }
-    switchCapitalization();
-    print("$newString \r\n");
+    $newString = join($givenStringArray);
+    return $newString;
+}
+$newString = switchCapitalization($givenString);
+print("$newString \r\n");
+
 ?>
