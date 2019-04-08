@@ -4,15 +4,19 @@
 
 $string = "javascript";
 
-function rotateString() {
-    $lastLetter = $string[9];
-    $restOfString = substr($string, 0, 8);
-    return($lastLetter + $restOfString);
+function rotateString($string) {
+    $lastLetter = substr($string, 9);
+    $restOfString = substr($string, 0, 9);
+    return $lastLetter + $restOfString;
 }
 
-setInterval(function() {
-    print($string);
-    $string = rotateString($string);
-}, 2000);
+function runRotateString() {
+    for($x = 0; $x <= strlen($string); $x++) {
+        $string = rotateString($string);
+        print $string;
+        sleep(2);
+    }
+}
 
+runRotateString();
 ?>

@@ -1,4 +1,4 @@
-var string = "javascript";
+var stringToRotate = "javascript";
 
 function rotateString(stringToRotate) {
     var lastLetter = stringToRotate.substr(-1);
