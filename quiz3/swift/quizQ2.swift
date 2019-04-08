@@ -6,7 +6,7 @@
 // Possibly need to use end index to grab the last letter and maybe prepend to attatch it to the begining?
 //still trying to find a way to do this without using substring
 
-var word = "Chocolate"
+var word = "javascript"
 for character in word {
     var begining = word.[..8]
     var end = word[9..9]
