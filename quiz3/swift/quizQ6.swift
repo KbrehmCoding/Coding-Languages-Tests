@@ -1,4 +1,5 @@
 // 6. Write a program to replace every character in a given string with the character following it in the alphabet.
+
 // Iterate through the string characters or slice the string up into an array to iterate through
 // For(each?) loop to go through them and then stop
 // If else statements to determine if it is uppercase or lowercase
@@ -6,4 +7,10 @@
 // Join the new away back into a string
 // Return and Print the new string
 var givenString = "orange"
+var newStringArray = []
 
+for index in {
+
+}
+
+print(newString)
