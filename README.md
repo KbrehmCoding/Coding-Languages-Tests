@@ -1,5 +1,6 @@
 # Tests-from-Andrew
 
+Quiz 2-3
 
 1. Write a program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.
 
@@ -24,3 +25,8 @@
 11. Write a program to find the longest string from a given array.
 
 12. Write a program to change the capitalization of all letters in a given string.
+
+
+quiz 4
+
+Using the template creat a simple canvas game
