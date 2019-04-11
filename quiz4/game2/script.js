@@ -31,7 +31,7 @@ var mouseClicked = () => {
 var pongBall = () => {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "#F8BD32";
     ctx.fill();
     ctx.closePath();
 };
