@@ -4,9 +4,11 @@ body {
 }
 
 #canvaspane {
+    background-color: blue
     cursor: default;
 }
 
 #canvas {
+    background-color: blue !important;
     margin: auto;
 }
