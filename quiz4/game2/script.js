@@ -1,15 +1,14 @@
-var backgroundColor = color(119, 89, 189);
-var x = canvas.width/2;
-var y = canvas.height-30;
-var ballRadius = 10;
 
-
-var setup = () => {
+let setup = () => {
     fullScreen();
     background(backgroundColor);
+    backgroundColor = color(119, 89, 189);
+    x = canvas.width/2;
+    y = canvas.height-30;
+    ballRadius = 10;
 };
 
-var draw = () => {
+let draw = () => {
     background(backgroundColor);
     pongBall();
     rect(100, mouseY, 30, 80);
@@ -24,17 +23,29 @@ var draw = () => {
     y += dy;
 };
 
-var mouseClicked = () => {
+let mouseClicked = () => {
     backgroundColor = randomGoldenRatioColor();
 };
 
-var pongBall = () => {
+let pongBall = () => {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI*2);
     ctx.fillStyle = "#F8BD32";
     ctx.fill();
     ctx.closePath();
 };
+
+let lastTime = 0;
+
+function ballMovement(timestamp) {
+    let deltaTime = timestamp - lastTime;
+    lastTime = timestamp;
+
+    pongBall.update(deltaTime);
+    pongBall.draw(ctx);
+
+    requestAnimationFrame(ballMovement);
+}
 
 
 /* Define the edges of the feild so circle bounces off sides (done)
