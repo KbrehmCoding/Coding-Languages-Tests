@@ -59,12 +59,12 @@ function Background(backgroundColor) {
     };
 }
 
-function Paddle(isRightPaddle) {
+function Paddle(isPaddle) {
     this.width = 30;
     this.height = 80;
 
     this.draw = function () {
-        rect(isRightPaddle ? maxWidth - 100 - 30 : 100, mouseY, this.width, this.height);
+        rect(isPaddle ? maxWidth - 100 - 30 : 100, mouseY, this.width, this.height);
     };
 }
 
@@ -114,11 +114,7 @@ function Ball() {
     };
 }
 
-/* Define the edges of the feild so circle bounces off sides (done)
-Need a two reclangles that will follow the cursor (done)
-Make a moving circle (done)
-A circle that bounces off the rectangle when it makes contact
-Have the circle bounce off at an angle
-Scores on each side of the screen
-When the circle goes past one of the rectangles the other side gets a point
-I'm not sure where to put the max width and max height vars to keep the ball inside the game area */
+/* need to switch it so the edge that stops the ball is the bottom edge
+Have only one paddle  and move it to the bottom
+Will need to switch the height and width of the paddles to get it right for the new orientation
+Have the paddle only move on the x axis instead of the y axis*/
