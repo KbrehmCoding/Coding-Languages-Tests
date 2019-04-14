@@ -59,12 +59,12 @@ function Background(backgroundColor) {
     };
 }
 
-function Paddle(isPaddle) {
-    this.width = 30;
-    this.height = 80;
+function Paddle() {
+    this.width = 200;
+    this.height = 10;
 
     this.draw = function () {
-        rect(isPaddle ? maxWidth - 100 - 30 : 100, mouseY, this.width, this.height);
+        rect( mouseX, maxHeight - 100 -30, this.width, this.height);
     };
 }
 
@@ -80,13 +80,17 @@ function Ball() {
         if (!this.active) {
             return;
         }
-        if (this.y > c.H - this.radius || this.y < this.radius) {
+        if (this.y > c.H - this.radius) {
+            this.ySpeed *= -1;
+            // this.active = false;
+        }
+        if (this.y < this.radius) {
             this.ySpeed *= -1;
         }
         if (this.x > c.W - this.radius || this.x < this.radius) {
-            this.active = false;
+            this.xSpeed *= -1;
         }
-        if (this.shouldBounceOffLeftPaddle() || this.shouldBounceOffRightPaddle()) {
+        if (this.shouldBounceOffPaddle()) {
             this.xSpeed *= -1;
         }
         this.x += this.xSpeed;
@@ -97,17 +101,9 @@ function Ball() {
         circle(this.x, this.y, this.radius);
     };
 
-    this.shouldBounceOffLeftPaddle = function () {
-        const rightEdgeOfPaddle = 130;
-        if (this.y > mouseY && this.y < mouseY + 80 && this.x >= rightEdgeOfPaddle - 1 && this.x <= rightEdgeOfPaddle + 1) {
-            return true;
-        }
-        return false;
-    };
-
-    this.shouldBounceOffRightPaddle = function () {
-        const leftEdgeOfPaddle = maxWidth - 100 - 30;
-        if (this.y > mouseY && this.y < mouseY + 80 && this.x >= leftEdgeOfPaddle - 1 && this.x <= leftEdgeOfPaddle + 1) {
+    this.shouldBounceOffPaddle = function () {
+        const topEdgeOfPaddle = 800;
+        if (this.y > 800 && this.y < 800 + 80 && this.x >= topEdgeOfPaddle - 1 && this.x <= topEdgeOfPaddle + 1) {
             return true;
         }
         return false;
