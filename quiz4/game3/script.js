@@ -64,15 +64,15 @@ function Paddle() {
     this.height = 10;
 
     this.draw = function () {
-        rect( mouseX, maxHeight - 100 -30, this.width, this.height);
+        rect(mouseX , maxHeight - 100 -10, this.width, this.height);
     };
 }
 
 function Ball() {
     this.x = 130;
     this.y = 300;
-    this.xSpeed = 3;
-    this.ySpeed = 3;
+    this.xSpeed = 5;
+    this.ySpeed = 5;
     this.radius = 10;
     this.active = true;
 
@@ -91,7 +91,7 @@ function Ball() {
             this.xSpeed *= -1;
         }
         if (this.shouldBounceOffPaddle()) {
-            this.xSpeed *= -1;
+            this.ySpeed *= -1;
         }
         this.x += this.xSpeed;
         this.y += this.ySpeed;
@@ -102,15 +102,19 @@ function Ball() {
     };
 
     this.shouldBounceOffPaddle = function () {
-        const topEdgeOfPaddle = 800;
-        if (this.y > 800 && this.y < 800 + 80 && this.x >= topEdgeOfPaddle - 1 && this.x <= topEdgeOfPaddle + 1) {
+        const topOfPaddle = maxHeight - 100;
+        if (this.x > mouseX
+            && this.x < mouseX + 200
+            && this.y >= topOfPaddle - 1
+            && this.y <= topOfPaddle + 1) {
             return true;
         }
         return false;
     };
 }
 
-/* need to switch it so the edge that stops the ball is the bottom edge
-Have only one paddle  and move it to the bottom
-Will need to switch the height and width of the paddles to get it right for the new orientation
-Have the paddle only move on the x axis instead of the y axis*/
+/* need to switch it so the edge that stops the ball is the bottom edge (done)
+Have only one paddle  and move it to the bottom (done)
+Will need to switch the height and width of the paddles to get it right for the new orientation (done)
+Have the paddle only move on the x axis instead of the y axis (done)
+Determine how to set the ball to bounce off the top of the new paddle (done) */
