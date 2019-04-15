@@ -7,10 +7,17 @@
 // Join the new away back into a string
 // Return and Print the new string
 var givenString = "orange"
-var newStringArray = []
 
-for index in {
-
+for i in givenString {
+    if UInt8(i) == 122 {
+        UInt8(i) = 97
+    } else if UInt8(i) == 90 {
+        UInt8(i) = 65
+    } else if UInt8(i) > 65 && UInt8(i) < 90 {
+        UInt8(i) = UInt8(i) + 1
+    } else if UInt8(i) > 97 && UInt8(i) < 121 {
+        UInt8(i) = UInt8(i) + 1
+    }
 }
 
 print(newString)

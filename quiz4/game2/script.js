@@ -99,7 +99,10 @@ function Ball() {
 
     this.shouldBounceOffLeftPaddle = function () {
         const rightEdgeOfPaddle = 130;
-        if (this.y > mouseY && this.y < mouseY + 80 && this.x >= rightEdgeOfPaddle - 1 && this.x <= rightEdgeOfPaddle + 1) {
+        if (this.y > mouseY
+            && this.y < mouseY + 80
+            && this.x >= rightEdgeOfPaddle - 1
+            && this.x <= rightEdgeOfPaddle + 1) {
             return true;
         }
         return false;
@@ -107,7 +110,10 @@ function Ball() {
 
     this.shouldBounceOffRightPaddle = function () {
         const leftEdgeOfPaddle = maxWidth - 100 - 30;
-        if (this.y > mouseY && this.y < mouseY + 80 && this.x >= leftEdgeOfPaddle - 1 && this.x <= leftEdgeOfPaddle + 1) {
+        if (this.y > mouseY
+            && this.y < mouseY + 80
+            && this.x >= leftEdgeOfPaddle - 1
+            && this.x <= leftEdgeOfPaddle + 1) {
             return true;
         }
         return false;
